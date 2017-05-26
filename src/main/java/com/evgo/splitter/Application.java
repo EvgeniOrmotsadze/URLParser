@@ -12,6 +12,10 @@ public class Application {
     public static void main(String[] args) {
         UrlParser regExpUrlParser = new RegExpUrlParser();
         UrlParser stateMachineUrlParser = new StateMachineUrlParser();
+        if(args.length == 0){
+            System.out.println("URL Argument is not providing, please provide url");
+            System.exit(0);
+        }
         String url = args[0];
         try {
             long startTimeRegExp = System.nanoTime();
